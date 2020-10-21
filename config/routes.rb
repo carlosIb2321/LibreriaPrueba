@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'staticas/contacto'
-  get 'staticas/nosotros'
-  get 'home/index'
-  root 'home#index'
   
+
+
+  resources :stores
+  
+  get 'probar', to: 'control#saludo'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
