@@ -1,3 +1,5 @@
+
+
 <%= store.address%> 
 <%= store.codename%>
 <%= store.Phone%>
@@ -5,3 +7,4 @@
 <%= link_to 'Destroy', store, method: :delete, data: { confirm: 'sure?'}%>
 <br>
 <br>
+<%= link_to 'Register Book', new_storage_path(id: store.id)%>

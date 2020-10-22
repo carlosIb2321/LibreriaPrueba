@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @storage.store.codename %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @storage.book.title %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @storage.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_storage_path(@storage, store_id: @storage.store_id) %> |
+<%= link_to 'Back', book_path(@storage.book_id)%>

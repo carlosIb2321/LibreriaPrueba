@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+ <h1> Bienvenido a Tus librerias <%= current_user.name%> </h1>
+
+<% else %>
+ <h1> Adios :D </h1>
+<% end %>

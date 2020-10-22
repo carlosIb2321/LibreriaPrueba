@@ -1,0 +1,7 @@
+<h1>Editing Storage</h1>
+
+<%= render 'form', storage: @storage, url: storage_path(id: @storage.id) %>
+
+
+<%= link_to 'Show', @storage %> |
+<%= link_to 'Back', book_path(@storage.book_id) %>

@@ -1,7 +1,11 @@
 class StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy ]
   def index
-    @stores = Store.all
+    if current_user.present? 
+      @stores = current_user.stores
+    else
+      @stores = Store.all
+    end
   end
 
   def new 
@@ -9,19 +13,20 @@ class StoresController < ApplicationController
   end
 
   def create 
-    # render plain: params[:store].inspect
+     
     @store = Store.new store_params
-    @store.save
-    # if @store.save 
-    #   redirect_to new_store_path
-    #else
-     #  render :new
-    #end
-    redirect_to @store
+    @store.user = current_user
+    if @store.save 
+      redirect_to stores_path
+    else
+      render :new
+    end
+    
   end
 
 
   def show
+    redirect_to stores_path
   end
 
   def edit
