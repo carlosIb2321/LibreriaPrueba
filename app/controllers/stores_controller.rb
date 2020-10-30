@@ -26,7 +26,7 @@ class StoresController < ApplicationController
 
 
   def show
-    redirect_to stores_path
+    @storages = Store.find(params[:id]).storage
   end
 
   def edit

@@ -1,10 +1,24 @@
 
+<div class="container">
 
-<%= store.address%> 
-<%= store.codename%>
-<%= store.Phone%>
-<%= link_to 'Edit', edit_store_path(store)%>
-<%= link_to 'Destroy', store, method: :delete, data: { confirm: 'sure?'}%>
-<br>
-<br>
-<%= link_to 'Register Book', new_storage_path(id: store.id)%>
+
+
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"><%= store.address%></th>
+      <th scope="col"><%= store.codename%></th>
+      <th scope="col"><%= store.Phone%></th>
+      
+    </tr>
+  </thead>
+ 
+  <%= link_to 'Edit', edit_store_path(store), {:class=>"btn btn-light"}%>
+  <%= link_to 'Destroy', store, method: :delete, data: { confirm: 'sure?'}%>
+  <%= link_to 'Register Books', new_storage_path(id: store.id), {:class=>"btn btn-light"}%>
+  <%= link_to 'New book', new_book_path, {:class=>"btn btn-light"}%>
+  <%= link_to 'Inventory', store_path(store), {:class=>"btn btn-light"}%>
+  
+
+  
+</div>

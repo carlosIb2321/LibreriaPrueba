@@ -1,19 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
+<div class="container">
+
+
+
+
+ <p id="notice"><%= notice %></p>
+
+ <p>
   <strong>Store:</strong>
   <%= @storage.store.codename %>
-</p>
+ </p>
 
-<p>
+ <p>
   <strong>Book:</strong>
   <%= @storage.book.title %>
-</p>
+ </p>
 
-<p>
+ <p>
   <strong>Quantity:</strong>
   <%= @storage.quantity %>
-</p>
+ </p>
 
-<%= link_to 'Edit', edit_storage_path(@storage, store_id: @storage.store_id) %> |
-<%= link_to 'Back', book_path(@storage.book_id)%>
+ <%= link_to 'Edit', edit_storage_path(@storage, store_id: @storage.store_id), {:class=>"btn btn-light"} %> |
+ <%= link_to 'Back', book_path(@storage.book_id), {:class=>"btn btn-light"}%>
+
+ 
+</div>
+

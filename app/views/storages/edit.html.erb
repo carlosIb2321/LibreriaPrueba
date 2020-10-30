@@ -3,5 +3,5 @@
 <%= render 'form', storage: @storage, url: storage_path(id: @storage.id) %>
 
 
-<%= link_to 'Show', @storage %> |
-<%= link_to 'Back', book_path(@storage.book_id) %>
+<%= link_to 'Show', @storage , {:class=>"btn btn-light"} %> |
+<%= link_to 'Back', book_path(@storage.book_id), {:class=>"btn btn-light"} %>
